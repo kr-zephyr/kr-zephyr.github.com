@@ -20,3 +20,5 @@ github_username:  kr-zephyr
 
 # Build settings
 markdown: kramdown
+
+disqus: dbe-dev-ops
