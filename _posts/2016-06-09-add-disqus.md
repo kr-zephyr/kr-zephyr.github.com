@@ -12,7 +12,7 @@ categories: devops-diary
 
 disqus의 자세한 내용은 검색해 보면 많은 내용이 나오니 참고하시구요.
 
-제가 참고한 블로그는 [Disqus - github 블로그에 댓글 기능 추가하기](http://djflexible.github.io/blog/disqus.html) 입니다.
+제가 참고한 블로그는 [Disqus - github 블로그에 댓글 기능 추가하기](http://djflexible.github.io/blog/disqus.html){:target="_blank"} 입니다.
 
 disqus에 가입하고 Site를 만들어 셋팅하는 것까지는 그리 어렵지 않았습니다.
 
