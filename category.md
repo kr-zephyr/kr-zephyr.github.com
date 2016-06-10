@@ -19,7 +19,8 @@ permalink: /category/
 {% endfor %}
 
 
-devops-diary 카테고리의 모든 POST들
+devops-diary 카테고리의 모든 POST들1
+
 {% for post in site.categories.devops-diary %}
     {% if post.title != nil %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
