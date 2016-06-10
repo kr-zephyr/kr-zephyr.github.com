@@ -32,8 +32,10 @@ permalink: /category/
 <li>{{ category | first }}</li>
 {% endfor %}
 
-###태그도 뽑아보자###
+###태그도 뽑아보자2###
 
-{% for tag in page.tags %}
+{% for tags in page.tags %}
+  {% for tag in tags %}
 <li>{{ tag | first }}</li>
+  {% endfor %}
 {% endfor %}
