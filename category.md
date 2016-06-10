@@ -20,9 +20,13 @@ permalink: /category/
 
 
 devops-diary 카테고리의 모든 POST들1
-
 {% for post in site.categories.devops-diary %}
     {% if post.title != nil %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
+{% endfor %}
+
+카테고리 목록을 뽑아보자...
+{% for category in site.categories %}
+<li>{{ category | first }}</li>
 {% endfor %}
