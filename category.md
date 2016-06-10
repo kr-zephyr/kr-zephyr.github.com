@@ -20,8 +20,8 @@ permalink: /category/
 
 
 devops-diary 카테고리의 모든 POST들1
-{% for post in site.categories.devops-diary %}
-    {% if post.title != nil %}
+{% for apost in site.categories.devops-diary %}
+    {% if apost.title != nil %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
 {% endfor %}
