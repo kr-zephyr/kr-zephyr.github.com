@@ -19,11 +19,9 @@ permalink: /category/
 {% endfor %}
 
 
-devops-diary 카테고리의 모든 POST들1
+devops-diary 카테고리의 모든 POST들 : if를 지워봄
 {% for apost in site.categories.devops-diary %}
-    {% if apost.title != nil %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endif %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 
 카테고리 목록을 뽑아보자...
