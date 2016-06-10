@@ -22,6 +22,11 @@
       </div>
     </nav>
 
+    <nav class="site-nav">
+        {% for category in site.categories %}
+        <a>{{ category | first }}</a>
+        {% endfor %}
+    </nav>
   </div>
 
 </header>
