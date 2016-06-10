@@ -2,7 +2,8 @@
 layout: post
 title:  "깃허브 블로그에 disqus 서비스로 댓글 적용"
 date:   2016-06-09 17:20:00 +0900
-categories: devops-diary
+categories: jekyll
+tags: ['jekyll', 'disqus']
 ---
 깃허브를 기반으로 블로그를 생성하고 여러가지 커스터마이징을 진행하고 있습니다.
 
