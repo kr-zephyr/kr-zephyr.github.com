@@ -17,3 +17,6 @@ permalink: /category/
   </ul>
 </li>
 {% endfor %}
+
+devops-diary 카테고리의 모든 POST들
+{{site.categories.devops-diary}}
