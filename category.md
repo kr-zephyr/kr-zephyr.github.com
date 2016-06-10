@@ -21,21 +21,14 @@ permalink: /category/
 <h3>devops-diary 카테고리의 모든 POST들</h3>
 
 {% for post in site.categories.devops-diary %}
+
     {% if post.title != nil %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
 {% endfor %}
 
-<h3>카테고리 목록을 뽑아보자<h3>
+<h3>카테고리 목록을 뽑아보자</h3>
 
 {% for category in site.categories %}
 <li>{{ category | first }}</li>
-{% endfor %}
-
-<h3>태그도 뽑아보자2</h3>
-
-{% for tags in page.tags %}
-  {% for tag in tags %}
-<li>{{ tag | first }}</li>
-  {% endfor %}
 {% endfor %}
