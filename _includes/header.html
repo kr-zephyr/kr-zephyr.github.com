@@ -22,11 +22,13 @@
       </div>
     </nav>
 
-    <nav class="site-nav">
+    <div>
+      <div class="trigger">
         {% for category in site.categories %}
-        <a>{{ category | first }}</a>
+        <a class="page-link">{{ category | first }}</a>
         {% endfor %}
-    </nav>
+      </dev>
+    </div>
   </div>
 
 </header>
