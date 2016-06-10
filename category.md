@@ -19,11 +19,9 @@ permalink: /category/
 {% endfor %}
 
 
-devops-diary 카테고리의 모든 POST들 (변경해봄4)
-- 포스트 목록을 읽어옴
-  {% for post in site.categories.devops-diary %}
-  - 포스트 목록에서 포스트를 읽어옴
+devops-diary 카테고리의 모든 POST들
+{% for post in site.categories.devops-diary %}
     {% if post.title != nil %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
-  {% endfor %}
+{% endfor %}
