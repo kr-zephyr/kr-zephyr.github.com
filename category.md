@@ -18,7 +18,8 @@ permalink: /category/
 </li>
 {% endfor %}
 
-devops-diary 카테고리의 모든 POST들
+
+devops-diary 카테고리의 모든 POST들 (변경해봄)
 {% for category in site.categories.devops-diary %}
 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
