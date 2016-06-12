@@ -16,8 +16,10 @@ permalink: /category/
   {% endfor %}
   </ul>
 </li>
+<br/>
 {% endfor %}
 
+<!--
 <h3>devops-diary 카테고리의 모든 POST들</h3>
 
 {% for post in site.categories.devops-diary %}
@@ -31,3 +33,4 @@ permalink: /category/
 {% for category in site.categories %}
 <li>{{ category | first }}</li>
 {% endfor %}
+-->
