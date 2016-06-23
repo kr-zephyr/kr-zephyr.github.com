@@ -2,7 +2,7 @@
 layout: post
 title:  "자바 프로그램을 윈도우용 App으로 사용할 수 있는 몇가지 방법(1)"
 date:   2016-06-07 17:00:00 +0900
-categories: java, electron, windows app
+categories: java electron windows-app
 ---
 저는 자바를 주 언어로 하는 웹 개발자 입니다.
 
