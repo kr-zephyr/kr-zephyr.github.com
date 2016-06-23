@@ -10,7 +10,7 @@ permalink: /category/
   {% for posts in category %}
     {% for post in posts %}
       {% if post.title != nil %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url }}">[{{ post.date | date: "%Y-%m-%d" }}] {{ post.title }}</a></li>
       {% endif %}
     {% endfor %}
   {% endfor %}
