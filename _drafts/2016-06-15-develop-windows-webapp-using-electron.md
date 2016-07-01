@@ -171,3 +171,12 @@ java@0.7.2 node_modules\java
 3. electron-test2-win32-x64 폴더 생성되고 하위에 배포 프로그램 위치함
     - 문제 : 기존 app이 resources/app으로 이동되면서 java classpath push 시 경로 문제 발생함
     - 상대 경로로 잡아도 electron-test2.exe를 기준으로 상대 경로 실행됨
+
+
+
+#### node-java를 사용하여 개발한 후 electron-packager로 패키징하여 배포하니 문제 발생
+1. 실행 시 아래와 같은 오류 발생(electron으로부터...)
+ELECTRON_ASAR.js:158 Uncaught Error: The specified module could not be found.
+\\?\D:\project-sources\201606-unitrontech-edi-converter\unitrontech-edi-converter\electron-pkg\resources\app\ediconverter-win32-x64\resources\app\node_modules\java\build\Release\nodejavabridge_bindings.node
+2. {project_source}\resources\app\node_modules\java\build\jvm_dll_path.json의 jvm.dll path가 개발 장비에 맞추에 절대경로로 설정됨. 해당 jvm.dll 위치 설정 변경해야 함.
+3. 그런데 JVM의 배포 문제가 있음. 사용자의 환경에 따라 JVM의 위치가 다른 경우 배포 시 마다 모든 JVM의 위치를 잡아주어야 하는데... 이건 고민 좀 해봐야 할 듯
