@@ -1,6 +1,6 @@
-##Electron으로 윈도우 웹앱 개발하기##
+## Electron으로 윈도우 웹앱 개발하기
 
-###reference###
+### reference
 - [electron으로-웹-앱-만들듯-데스크톱-앱-만들기]( http://developer.dramancompany.com/2015/12/electron%EC%9C%BC%EB%A1%9C-%EC%9B%B9-%EC%95%B1-%EB%A7%8C%EB%93%A4%EB%93%AF-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%86%B1-%EC%95%B1-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 - [electron 한글 튜토리얼 - 시작하기](https://github.com/electron/electron/blob/master/docs-translations/ko-KR/tutorial/quick-start.md)
 
@@ -14,7 +14,8 @@ Java 사용하기 (아래는 윈도우에서 해당됨)
 - window 종속 있음
     - .Net Framework 2.0 SDK 혹은 Visual Studio 2005 필요함
     - The Windows 8.1 SDK 필요함
-    -
+
+<pre>
 C:\dev\nodejs>npm install java
 -
 > java@0.7.2 install C:\dev\nodejs\node_modules\java
@@ -56,45 +57,37 @@ npm ERR! There is likely additional logging output above.
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     C:\dev\nodejs\npm-debug.log
+</pre>
 
-
-
-
-#### VS2015 설치 후 ####
+#### VS2015 설치 후
+<pre>
 C:\dev\nodejs\node_modules\java>if not defined npm_config_node_gyp (node "C:\dev\nodejs\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild )
 이 솔루션의 프로젝트를 한 번에 하나씩 빌드합니다. 병렬 빌드를 사용하려면 "/m" 스위치를 추가하십시오.
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Platforms\x64\PlatformToolsets\v140\Toolset.targets(36,5): error
  MSB8036: The Windows SDK version 8.1 was not found. Install the required version of Windows SDK or change the SDK vers
 ion in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\dev\nodejs\n
 ode_modules\java\build\nodejavabridge_bindings.vcxproj]
+</pre>
 
-
-
-
-
-
-
-
-
-#### The Windows SDK version 8.1 설치 후 ####
+#### The Windows SDK version 8.1 설치 후
+<pre>
 C:\dev\nodejs\node_modules\java>if not defined npm_config_node_gyp (node "C:\dev\nodejs\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild )
 이 솔루션의 프로젝트를 한 번에 하나씩 빌드합니다. 병렬 빌드를 사용하려면 "/m" 스위치를 추가하십시오.
   TRACKER : 오류 TRK0005: "CL.exe"을(를) 찾지 못했습니다. 지정된 파일을 찾을 수 없습니다.
 
-
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(356,5): error MSB6006: "CL.exe"이(가)
 종료되었습니다(코드: 5). [C:\dev\nodejs\node_modules\java\build\nodejavabridge_bindings.vcxproj]
-
+</pre>
 
 
 #### Visual Studio 재 설치 ####
 (중요!!!!) VC++ 개발 도구 설치해야 함.
 VS2015 설치 시 다음, 다음만 하지 말자
+<pre>
 C:\dev\nodejs>npm install java
 -
 > java@0.7.2 install C:\dev\nodejs\node_modules\java
 > node-gyp rebuild
-
 
 C:\dev\nodejs\node_modules\java>if not defined npm_config_node_gyp (node "C:\dev\nodejs\node_modules\npm\bin\node-gyp-bin\\..\..\node_modules\node-gyp\bin\node-gyp.js" rebuild )  else (node "" rebuild )
 이 솔루션의 프로젝트를 한 번에 하나씩 빌드합니다. 병렬 빌드를 사용하려면 "/m" 스위치를 추가하십시오.
@@ -134,16 +127,14 @@ java@0.7.2 node_modules\java
 ├── nan@2.3.2
 ├── glob@7.0.3 (path-is-absolute@1.0.0, inherits@2.0.1, once@1.3.3, inflight@1.0.5, minimatch@3.0.2)
 └── lodash@4.11.1
+</pre>
 
+#### 참고 레퍼런스
+- [electron 공식 quick start](http://electron.atom.io/docs/tutorial/quick-start/)
+- [node-java](https://github.com/joeferner/node-java)
+- [Cross Platform Application 개발하기 – 2편 : Electron & Node-Java](http://brantiffy.axisj.com/archives/397)
 
-
-
-참고 레퍼런스
-[electron 공식 quick start](http://electron.atom.io/docs/tutorial/quick-start/)
-[node-java](https://github.com/joeferner/node-java)
-[Cross Platform Application 개발하기 – 2편 : Electron & Node-Java](http://brantiffy.axisj.com/archives/397)
-
-사전 처리
+#### 사전 처리
 1. node 설치되어 있어야 함 (v4.4.5 w. npm v2.15.5)
 2. python 설치되어 있어야 함 (v2.7.11 required not v3)
 3. VC++ 관련 SDK 설치되어 있어야 함 (VS2015 Community Edition)
@@ -162,7 +153,7 @@ java@0.7.2 node_modules\java
 5. electron rebuild 실행 --> 별도 메시지없고 rebuild되는데 시간 많이 소요됨. 기다릴 것.
 6. app 실행
 
-배포하기
+#### 배포하기
 1. 전역으로 electron-package 설치
     - npm install electron-packager -g
 2. 패키징 명령
@@ -172,16 +163,14 @@ java@0.7.2 node_modules\java
     - 문제 : 기존 app이 resources/app으로 이동되면서 java classpath push 시 경로 문제 발생함
     - 상대 경로로 잡아도 electron-test2.exe를 기준으로 상대 경로 실행됨
 
-
-
 #### node-java를 사용하여 개발한 후 electron-packager로 패키징하여 배포하니 문제 발생
 1. 실행 시 아래와 같은 오류 발생(electron으로부터...)
+<pre>
 ELECTRON_ASAR.js:158 Uncaught Error: The specified module could not be found.
 \\?\D:\project-sources\201606-unitrontech-edi-converter\unitrontech-edi-converter\electron-pkg\resources\app\ediconverter-win32-x64\resources\app\node_modules\java\build\Release\nodejavabridge_bindings.node
+</pre>
 2. {project_source}\resources\app\node_modules\java\build\jvm_dll_path.json의 jvm.dll path가 개발 장비에 맞추에 절대경로로 설정됨. 해당 jvm.dll 위치 설정 변경해야 함.
 3. 그런데 JVM의 배포 문제가 있음. 사용자의 환경에 따라 JVM의 위치가 다른 경우 배포 시 마다 모든 JVM의 위치를 잡아주어야 하는데... 이건 고민 좀 해봐야 할 듯
-
-
 
 #### 2016.07.01
 맨붕 왔다.
