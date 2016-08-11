@@ -180,3 +180,11 @@ ELECTRON_ASAR.js:158 Uncaught Error: The specified module could not be found.
 \\?\D:\project-sources\201606-unitrontech-edi-converter\unitrontech-edi-converter\electron-pkg\resources\app\ediconverter-win32-x64\resources\app\node_modules\java\build\Release\nodejavabridge_bindings.node
 2. {project_source}\resources\app\node_modules\java\build\jvm_dll_path.json의 jvm.dll path가 개발 장비에 맞추에 절대경로로 설정됨. 해당 jvm.dll 위치 설정 변경해야 함.
 3. 그런데 JVM의 배포 문제가 있음. 사용자의 환경에 따라 JVM의 위치가 다른 경우 배포 시 마다 모든 JVM의 위치를 잡아주어야 하는데... 이건 고민 좀 해봐야 할 듯
+
+
+
+#### 2016.07.01
+맨붕 왔다.
+electron-packager에 JRE Binary 배포본을 포함해서 패키징 --> 기존에 JRE가 설치된 Win7에서 실행됨. JRE 설치 여부 상관없는 Win10에서 각각 메시지 다르며 실행 안됨.
+
+- 실행 시 경로에 한글 포함되어 있으면 node-java 모듈이 정상 실행되지 않음
