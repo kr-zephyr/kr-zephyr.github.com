@@ -38,7 +38,7 @@ Java Config를 사용하는 경우 @MapperScan 어노테이션을 사용하게 �
 >예시1) @MapperScan({"**/dao"})   
 >- 클래스 패스의 하위에서 모든 dao라는 패키지 안의 Mapper를 검색
 >
->예시2) @MapperScan({com.sz21c.test.mybatis.dao})   
+>예시2) @MapperScan({"com.sz21c.test.mybatis.dao"})   
 >- com.sz21c.test.mybatis.dao 패키지 하위를 검색.   
 >- Maven/Gradle과 같이 빌드 플랫폼을 이용해 빌드할 때에는 resource로 정의된 위치 하위의 폴더는 패키지 구조 형태로 빌드되어 들어가므로 소스(src/main/java)의 하위 패키지 안에 XML 파일을 둔 것이 아닌 resource(src/main/resource)의 하위에 폴더로 구성한 경우 @MapperScan으로 정의된 패키지와 동일한 폴더 구조가 되어야 합니다.
     
