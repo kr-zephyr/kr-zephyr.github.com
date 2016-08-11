@@ -76,12 +76,12 @@ Dao 클래스와 Mapper XML의 정확한 위치와 Dao의 패키지 네임, Mapp
 
 ### Dao를 인터페이스로 구현할 때
 - Dao를 인터페이스로 정의하는 경우 MapperScan을 설정해야 한다. (Java Config에서는 @MapperScan 어노테이션 사용)
-- Dao를 인터페이스로 정의하는 경우 Dao와 Mapper XML의 파일 이름이 달라도 상관없다.
-- Dao를 인터페이스로 정의하는 경우 Dao의 method와 mapper의 id는 반드시 같아야 한다.
+- Dao를 인터페이스로 정의하는 경우 Dao의 클래스 이름과 Mapper XML의 파일 이름이 달라도 상관없다.
+- Dao를 인터페이스로 정의하는 경우 Dao의 method 이름과 mapper의 id는 반드시 같아야 한다.
 
 ### Dao를 클래스로 구현할 때
 - Dao를 클래스로 정의하고 sqlSession을 사용하는 경우 SqlSessionFactory에 setMapperLocations을 반드시 설정해야 한다. (MapperScan을 사용하지 않음)
 - setMapperLocations에 PathMatchingResourcePatternResolver로 Mapper의 위치를 주입하는 경우 반드시 Mapper의 namespace와 Dao의 Package name이 일치해야 한다.
     - 이 경우 Wrong namespace. Expected 'xxx.xxx.xxx.dao.TestDevMapper' but found 'TestDevDao'.로 메시지가 반환되므로 설정 중에 오류를 미리 알 수 있다.
-- Dao를 클래스로 정의하고 sqlSession을 사용하는 경우 Dao와 Mapper XML의 파일 이름이 달라도 상관없다.
-- Dao를 클래스로 정의하고 sqlSession을 사용하는 경우 Dao의 method와 mapper의 id가 달라도 상관없다.
+- Dao를 클래스로 정의하고 sqlSession을 사용하는 경우 Dao의 클래스 이름과 Mapper XML의 파일 이름이 달라도 상관없다.
+- Dao를 클래스로 정의하고 sqlSession을 사용하는 경우 Dao의 method 이름과 mapper의 id가 달라도 상관없다.
