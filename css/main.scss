@@ -2,15 +2,16 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 
 // Our variables
-$base-font-family: "Nanum Barun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
+$base-font-family: 'Noto Sans KR', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+
 
 $spacing-unit:     30px;
 
@@ -51,3 +52,10 @@ $on-laptop:        1000px;
         "layout",
         "syntax-highlighting"
 ;
+
+blockquote {font-size: 16px;}
+
+.post-title{
+    font-size: 26px;
+    line-height: 1.2;
+}
