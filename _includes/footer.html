@@ -34,5 +34,22 @@
     </div>
 
   </div>
-
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function () {
+  var clientIp;
+  $.getJSON("http://jsonip.com/?callback=?", function (data) {
+    clientIp = data.ip;
+  });
+  var refUrl = document.referrer;
+  $.ajax({
+    type : 'POST',
+    url : 'http://dev.sz21c.com:18080/logger/put',
+    contentType : "application/json",
+    dataType : "json",
+    async : false,
+    data : JSON.stringify({clientIp : clientIp, referrerUrl : refUrl})
+  });
+});
+</script>
 </footer>
