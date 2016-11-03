@@ -61,7 +61,14 @@ MapperScan 혹은 MapperLocation 주입 시 위와 같이 패키지 경로 상�
 
 제 코딩 스타일로는 Dao를 구현한 후 package 정의를 복사하여 Mapper XML의 namespace에 붙여넣는데, 이 경우 Dao와 Mapper XML의 패키지는 동일하게 정의되지만, 생성된 패키지 위치가 엉뚱한 경우 Mapper XML을 찾지 못하게 됩니다.
 
-지금까지의 제 경험 상으로는 위의 3가지만 체크하면 대부분 오류를 바로 잡을 수 있었습니다.
+### 4. Builder의 Assemble 시 xml 누락 (2016.11.03 추가)
+이것도 종종 실수하는 부분으로 특히 신규 프로젝트를 위해 Framework들을 조합할 때 챙기지 못하는 부분입니다.
+
+제 경우에는 Maven을 builer로 주로 사용하는데, Spring Boot Starter를 만드는 경우 pom.xml의 build 설정은 기본 설정만 셋팅됩니다.
+만약 Mapper XML을 src/main/java의 java source 안에 포함하는 경우 build 시 class를 제외한 다른 파일들은 Assemble에 누락되게 됩니다.
+build된 target 경로를 직접 들여다 보지 않으면 종종 놓치는 부분인데, 특히 IDE에 WAS를 embedded해서 실행한다거나, Jar를 IDE에서 실행하거나, Jar를 직접 실행하는 경우 보통은 source 경로의 파일 위치만 체크하므로 실제 build된 산출물에는 Mapper XML이 포함되지 않았다는 것을 인지하지 못하는 경우가 있습니다.
+
+지금까지의 제 경험 상으로는 위의 4가지만 체크하면 대부분 오류를 바로 잡을 수 있었습니다.
 
 동일한 문제로 고생 중이신 개발자 분이 계시다면 도움되셨길 바랍니다.
 
