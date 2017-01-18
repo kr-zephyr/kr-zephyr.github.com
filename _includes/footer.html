@@ -37,14 +37,14 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
 $(document).ready(function () {
-  var urlTitleVal = document.getElementById("log_post_title").val;
+  var urlTitleVal = $("#log_post_title").val();
 
-  if(urlTitleVal != '') {
+  if(urlTitleVal != undefined) {
     console.log('urlTitleVal :: ' + urlTitleVal);
     var refUrlVal = document.referrer;
     $.ajax({
       type : 'POST',
-      url : 'https://dev.sz21c.com:8443/logger/put/test',
+      url : 'https://dev.sz21c.com:8443/logger/put',
       contentType : "application/json",
       dataType : "json",
       async : false,

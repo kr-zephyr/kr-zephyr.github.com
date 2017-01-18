@@ -1,4 +1,4 @@
-@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 /**
  * Reset some basic elements
  */
@@ -12,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Nanum Barun Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 16px/1.5 "Noto Sans KR", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -125,6 +125,8 @@ pre {
       max-width: calc(1000px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
+  .wrapper .trigger {
+    font-size: 14px; }
 
 /**
  * Clearfix
@@ -456,3 +458,10 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+blockquote {
+  font-size: 16px; }
+
+.post-title {
+  font-size: 26px;
+  line-height: 1.2; }
