@@ -38,15 +38,21 @@
 <script>
 $(document).ready(function () {
   var urlTitleVal = document.getElementById("log_post_title").value;
-  var refUrlVal = document.referrer;
-  $.ajax({
-    type : 'POST',
-    url : 'https://dev.sz21c.com:8443/logger/put/test',
-    contentType : "application/json",
-    dataType : "json",
-    async : false,
-    data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
-  });
+
+  if(urlTitleVal != '') {
+    console.log('urlTitleVal :: ' + urlTitleVal);
+    var refUrlVal = document.referrer;
+    $.ajax({
+      type : 'POST',
+      url : 'https://dev.sz21c.com:8443/logger/put/test',
+      contentType : "application/json",
+      dataType : "json",
+      async : false,
+      data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
+    });
+  } else {
+    console.log('urlTitleVal 없음');
+  }
 });
 </script>
 </footer>
