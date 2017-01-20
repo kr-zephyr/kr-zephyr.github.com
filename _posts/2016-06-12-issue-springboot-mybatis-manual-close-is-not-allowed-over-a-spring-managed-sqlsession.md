@@ -2,7 +2,7 @@
 layout: post
 title:  "[이슈대응] Spring Boot에서 MyBatis 사용 시 Test에서 DB를 사용한 후 Test를 종료하거나, App을 종료할 때 java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession이 발생하는 경우"
 date:   2016-06-12 10:30:00 +0900
-categories: resolve-issue
+categories: java mybatis resolve-issue
 ---
 얼마 전 Github에 공개해 둔 [SpringBootWebAppSample](https://github.com/kr-zephyr/SpringBootWebAppSample) 프로젝트를 손보면서 Test를 추가하던 중 아래와 같은 Exception을 받게 되었습니다.
 
