@@ -40,7 +40,6 @@ $(document).ready(function () {
   var urlTitleVal = $("#log_post_title").val();
 
   if(urlTitleVal != undefined) {
-    console.log('urlTitleVal :: ' + urlTitleVal);
     var refUrlVal = document.referrer;
     $.ajax({
       type : 'POST',
@@ -50,8 +49,6 @@ $(document).ready(function () {
       async : false,
       data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
     });
-  } else {
-    console.log('urlTitleVal 없음');
   }
 });
 </script>
