@@ -39,17 +39,19 @@
 $(document).ready(function () {
   var urlTitleVal = $("#log_post_title").val();
 
-  if(urlTitleVal != undefined) {
-    var refUrlVal = document.referrer;
-    $.ajax({
-      type : 'POST',
-      url : 'https://dev.sz21c.com:8443/logger/put',
-      contentType : "application/json",
-      dataType : "json",
-      async : false,
-      data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
-    });
+  if(urlTitleVal == undefined) {
+    urlTitleVal = '';
   }
+
+  var refUrlVal = document.referrer;
+  $.ajax({
+    type : 'POST',
+    url : 'https://dev.sz21c.com:8443/logger/put',
+    contentType : "application/json",
+    dataType : "json",
+    async : false,
+    data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
+  });
 });
 </script>
 </footer>
