@@ -24,7 +24,7 @@ ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)
 D:\private-project\kr-zephyr.github.com.git-writing-non-ga>
 {% endhighlight %}
 
-위와 같이 jekyll을 실행하기 위해 `gem update jekyll`이라는 명령을 실행했는데 `ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)`가 반환되었습니다.
+위와 같이 jekyll의 업데이트를 실행하기 위해 `gem update jekyll`이라는 명령을 실행했는데 `ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)`가 반환되었습니다.
 
 이 오류는 gem이 서버에 접근하기 위해 https로 접근하면서 클라이언트 인증이 되지 않아 발생하는데요.  
 rubygems 사이트에 해당 오류의 해결 방법, 즉, 인증서 업데이트 방법이 등록되어 있습니다.
@@ -33,14 +33,16 @@ rubygems 사이트에 해당 오류의 해결 방법, 즉, 인증서 업데이�
 ### 해결 방법
 참고 : [Ruby gems의 SSL CERTIFICATE UPDATES 가이드](http://guides.rubygems.org/ssl-certificate-update)
 
-
-
-### 해결!
 간단히 설명하면 rubygems-update-x.x.x.gem을 다운로드 받아 수동으로 업데이트하는 것으로 해결이 됩니다.  
 위 링크에서 `INSTALLING USING UPDATE PACKAGES` 항목을 찾아 `rubygems-update-2.6.7.gem` 파일을 다운로드 받은 후 문서의 가이드에 따라 `gem install --local rubygems-update-x.x.x.gem` 명령으로 업데이트 하면 됩니다.
 
+
+
+### 해결!...될 줄 알았는데...
+
 하지만 항상 그렇듯이 한방에 되면 이상한거죠.  
 당연하게도 저는 위의 방법으로 해결이 되지 않았습니다.  
+
 위 문서에서는 저처럼 rubygems를 수동으로 업데이트하여 해결되지 않는 사람들을 위해 수동으로 인증서를 업데이트하는 방법을 가이드하고 있습니다.
 
 [MANUAL SOLUTION TO SSL ISSUE](http://guides.rubygems.org/ssl-certificate-update/#manual-solution-to-ssl-issue)
