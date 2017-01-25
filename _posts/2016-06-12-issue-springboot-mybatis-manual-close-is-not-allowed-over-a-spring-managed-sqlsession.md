@@ -6,7 +6,7 @@ categories: java mybatis resolve-issue
 ---
 얼마 전 Github에 공개해 둔 [SpringBootWebAppSample](https://github.com/kr-zephyr/SpringBootWebAppSample) 프로젝트를 손보면서 Test를 추가하던 중 아래와 같은 Exception을 받게 되었습니다.
 
-{% highlight shell linenos %}
+{% highlight shell %}
 2016-06-07 14:23:04,260  WARN | o.s.beans.factory.support.DisposableBeanAdapter         | Invocation of destroy method 'close' failed on bean with name 'sqlSessionForMyBatis'
 java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession
 	at org.mybatis.spring.SqlSessionTemplate.close(SqlSessionTemplate.java:310)
