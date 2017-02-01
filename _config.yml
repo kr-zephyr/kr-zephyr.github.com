@@ -14,7 +14,7 @@ description: Digital Blue Eye(http://blog.sz21c.com)의 기술 이야기만 다�
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kr-zephyr.github.io" # the base hostname & protocol for your site
+url: "https://kr-zephyr.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  kr-zephyr
 
