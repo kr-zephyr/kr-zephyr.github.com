@@ -41,6 +41,7 @@ jekyll의 테마를 검색할 수 있는 곳은 [GitHub Pages themes](https://gi
 - RUNTIME DEPENDENCIES : 현재 테마가 지원하는 jekyll 버전과 필요한 플러그인 및 플러그인 버전
 
 우측 사이드 메뉴 중 중요부분
+
 - GEMFILE : RubyGems를 이용해 원격에서 .gem 파일을 다운로드 받을 수 있는 명령어
 - INSTALL : RubyGems를 이용해 원격에서 테마를 설치할 수 있는 명령어
 
