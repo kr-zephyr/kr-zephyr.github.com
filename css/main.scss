@@ -36,6 +36,12 @@ body {
     word-break: break-all;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 code, pre {
     font: 15px 'Overpass Mono', monospace;
     font-size: 16px;
