@@ -4,8 +4,24 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <a itemprop="mainEntityOfPage" href="{{ page.url }}"><h1 class="post-title" itemprop="name headline">{{ page.title }}</h1></a>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization" style="display: none;">
+        <span itemprop="name">Github pages</span>
+        <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+          <span itemprop="url">https://avatars0.githubusercontent.com/u/5876259?v=3&s=460</span>
+          <span itemprop="width">460px</span>
+          <span itemprop="height">460px</span>
+        </span>
+      </span>
+      <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject" style="display: none;">
+        <span itemprop="url">https://avatars0.githubusercontent.com/u/5876259?v=3&s=460</span>
+        <span itemprop="width">460px</span>
+        <span itemprop="height">460px</span>
+      </span>
+    </p>
   </header>
   <input type="hidden" id="log_post_title" value="{{ page.title }}"/>
   
