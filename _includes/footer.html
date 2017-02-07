@@ -50,8 +50,23 @@ $(document).ready(function () {
     contentType : "application/json",
     dataType : "json",
     async : false,
-    data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal})
+    data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal, loggerExcepted : getLoggerExceptedCookie()})
   });
 });
+
+function getLoggerExceptedCookie()
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x=="excepted-log-value")
+        {
+        return unescape(y);
+        }
+      }
+}
 </script>
 </footer>
