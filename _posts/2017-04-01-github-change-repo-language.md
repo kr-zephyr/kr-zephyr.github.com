@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Github의 레파지토리에 기본 언어 변경하기"
-date:   2017-04-01 16:34:00 +0900
+date:   2017-06-07 23:30:00 +0900
 categories: github
 ---
 
