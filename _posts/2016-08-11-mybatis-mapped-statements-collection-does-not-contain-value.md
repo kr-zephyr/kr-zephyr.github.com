@@ -2,7 +2,8 @@
 layout: post
 title:  "[이슈대응] myBatis에서 Mapped Statements collection does not contain value for... Exception이 발생하는 경우 체크할 부분들"
 date:   2016-08-11 15:14:00 +0900
-categories: java mybatis resolve-issue
+categories: mybatis
+tages: java mybatis resolve-issue
 ---
 제가 종종 겪는 Exception 입니다.
 
