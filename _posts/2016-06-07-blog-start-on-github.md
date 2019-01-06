@@ -5,6 +5,10 @@ date:   2016-06-07 17:00:00 +0900
 categories: devops-diary
 tags: ['github', 'blog']
 ---
+
+* content
+{:toc}
+
 아주 오래전(아마도 1997년...)부터 홈페이지라는 것을 운영하고 있었습니다.
 
 몇번의 사이트 리뉴얼을 거쳐 지금은 티스토리 기반의 블로그가 되어 있는데요. [Digital Blue Eye (http://blog.sz21c.com)](http://blog.sz21c.com){:target="_blank"}라는 이름도 가지고 있는 한 때 정말 열심히 포스팅을 올리던 곳이었죠.(결혼하고 나니 좀 뜸해지긴 했네요. @.@)

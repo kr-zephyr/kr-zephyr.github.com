@@ -5,6 +5,10 @@ date:   2016-06-12 10:30:00 +0900
 categories: Spring
 tags: ['java', 'mybatis', 'resolve-issue']
 ---
+
+* content
+{:toc}
+
 얼마 전 Github에 공개해 둔 [SpringBootWebAppSample](https://github.com/kr-zephyr/SpringBootWebAppSample) 프로젝트를 손보면서 Test를 추가하던 중 아래와 같은 Exception을 받게 되었습니다.
 
 {% highlight shell %}

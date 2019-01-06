@@ -5,6 +5,10 @@ date:   2016-08-11 15:14:00 +0900
 categories: mybatis
 tags: ['java','mybatis', 'resolve-issue']
 ---
+
+* content
+{:toc}
+
 제가 종종 겪는 Exception 입니다.
 
 보통은 프로젝트 초기 개발에 사용할 프레임워크를 처음 정의하는 단계에서 많이 마주쳤던 Exception으로 기억하네요.

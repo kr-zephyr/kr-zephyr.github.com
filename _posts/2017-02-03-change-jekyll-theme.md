@@ -5,6 +5,10 @@ date:   2017-02-03 16:26:00 +0900
 categories: jekyll
 tags: ['jekyll','theme']
 ---
+
+* content
+{:toc}
+
 jekyll에서의 테마 변경은 처음에만 어렵지 한번만 해보면 꽤 쉽습니다.  
 저도 이번에 기본 테마를 사용하다가 새로운 테마로 변경해 보았습니다.
 

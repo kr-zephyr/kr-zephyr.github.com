@@ -5,6 +5,10 @@ date:   2016-06-09 17:20:00 +0900
 categories: jekyll
 tags: ['jekyll', 'disqus', 'blog', 'comment', '댓글']
 ---
+
+* content
+{:toc}
+
 깃허브를 기반으로 블로그를 생성하고 여러가지 커스터마이징을 진행하고 있습니다.
 
 첫번째로 진행하는 것은 댓글 기능을 추가하는 것인데요.
