@@ -3,6 +3,7 @@ layout: post
 title:  "깃허브에 블로그를 만들면서..."
 date:   2016-06-07 17:00:00 +0900
 categories: devops-diary
+tags: ['github', 'blog']
 ---
 아주 오래전(아마도 1997년...)부터 홈페이지라는 것을 운영하고 있었습니다.
 

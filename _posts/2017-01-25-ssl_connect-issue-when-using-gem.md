@@ -3,6 +3,7 @@ layout: post
 title:  "Ruby gem 사용 시 SSL_connection 오류가 발생하는 경우 해결책"
 date:   2017-01-25 18:00:00 +0900
 categories: gem
+tags: ['ruby','gem']
 ---
 오늘 블로그의 테마를 바꿨습니다.  
 바꾸는 김에 jekyll의 로컬 실행을 위한 업데이트도 진행했구요. (사실 테마가 jekyll 3.3 이상을 요구해서 업데이트를...)
