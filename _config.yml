@@ -29,7 +29,6 @@ defaults:
 markdown: kramdown
 
 disqus: dbe-dev-ops
-theme: jekyll-theme-modernist
 
 paginate: 5
 simple_search: http://google.com/search

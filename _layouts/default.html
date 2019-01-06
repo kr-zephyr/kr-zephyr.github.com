@@ -1,130 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="{{ "/css/main.css" }}">
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  {% include head.html %}
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-1170453-3', 'auto');
-    ga('send', 'pageview');
-
-    </script>
-  </head>
   <body>
-    <div class="wrapper">
-      <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
-        <h1><a href="{{ site.baseurl }}/">{{ site.title | default: site.github.repository_name }}</a></h1>
-        {% if site.description or site.github.project_tagline %}
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-        {% endif %}
-      </header>
-      <section>
 
-      {{ content }}
+    {% include header.html %}
 
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/{{ site.github_username }}" target="_blank">{{ site.github_username }}</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        {{ content }}
 
-  {% if site.google_analytics %}
+    {% include footer.html %}
+    {% include backToTop.html %}
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    <script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
     <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      smoothScroll.init({
+        speed: 500, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeInOutCubic', // Easing pattern to use
+        offset: 20, // Integer. How far to offset the scrolling anchor location in pixels
+      });
     </script>
-    <script type="text/javascript">
-      try {
-        var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
-      pageTracker._trackPageview();
-      } catch(err) {}
-    </script>
-  {% endif %}
-  
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script>
-  $(document).ready(function () {
-    // 쿠키값을 업데이트
-    var query = window.location.search.substring(1);
-    var QueryString = function () {
-      // This function is anonymous, is executed immediately and 
-      // the return value is assigned to QueryString!
-      var query_string = {};
-      var vars = query.split("&");
-      for (var i=0;i<vars.length;i++) {
-        var pair = vars[i].split("=");
-            // If first entry with this name
-        if (typeof query_string[pair[0]] === "undefined") {
-          query_string[pair[0]] = decodeURIComponent(pair[1]);
-            // If second entry with this name
-        } else if (typeof query_string[pair[0]] === "string") {
-          var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
-          query_string[pair[0]] = arr;
-            // If third or later entry with this name
-        } else {
-          query_string[pair[0]].push(decodeURIComponent(pair[1]));
-        }
-      } 
-      return query_string;
-    }();
-
-    if(query != null && QueryString.key != null && QueryString.key != "undefined") {
-      var exdate=new Date();
-      exdate.setDate(exdate.getDate() + 3650);
-      var c_value=escape(QueryString.key) + ("; expires="+exdate.toUTCString());
-      document.cookie="excepted-log-value=" + c_value;
-    }
-
-    // 로그 전송
-    var urlTitleVal = $("#log_post_title").val();
-
-    if(urlTitleVal == undefined) {
-      urlTitleVal = '';
-    }
-
-    var refUrlVal = document.referrer;
-    $.ajax({
-      type : 'POST',
-      url : 'https://dev.sz21c.com:8443/logger/put',
-      contentType : "application/json",
-      dataType : "json",
-      async : false,
-      data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal, loggerExcepted : getLoggerExceptedCookie()})
-    });
-  });
-
-  function getLoggerExceptedCookie()
-  {
-      var i,x,y,ARRcookies=document.cookie.split(";");
-      for (i=0;i<ARRcookies.length;i++)
-      {
-        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-        x=x.replace(/^\s+|\s+$/g,"");
-        if (x=="excepted-log-value")
-          {
-          return unescape(y);
-          }
-        }
-  }
-  </script>
+    <!-- <script src="{{ " /js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
   </body>
+
 </html>
