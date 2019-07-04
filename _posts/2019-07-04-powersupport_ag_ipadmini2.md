@@ -82,6 +82,7 @@ tags: ['powersupport', 'anti-glare', 'ipad mini2']
 무지개색이 눈에 띄게 보인다는 거죠.
 
 ![실제 보면 이 사진보다 더 심합니다.](/asserts/2019-07-04-powersupport_ag_ipadmini2/powersupport_ag_ipadmini2_03.jpg)
+(이 사진은 PC에서 보아야 제가 의도한대로 보여요.)
 
 위 사진은 근접 촬영 후 별도의 후보정은 하지 않고 크롭한 사진인데요.
 
@@ -90,7 +91,6 @@ tags: ['powersupport', 'anti-glare', 'ipad mini2']
 제가 기대한 것(거의 꿈과 망상에 가깝지만)은 e-ink에 보다 가까운 느낌이었는데 결과는 근처에도 가지 못했습니다.
 
 ![e-ink 제품인 리디페이퍼 프로](/asserts/2019-07-04-powersupport_ag_ipadmini2/powersupport_ag_ipadmini2_04.jpg)
-(이 사진은 PC에서 보아야 제가 의도한대로 보여요.)
 
 아이패드 미니2 이외에 최근에 리디페이퍼 프로를 휴대용 기기로 추가했습니다.
 
