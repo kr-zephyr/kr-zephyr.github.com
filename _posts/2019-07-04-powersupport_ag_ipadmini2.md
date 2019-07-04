@@ -82,7 +82,7 @@ tags: ['powersupport', 'anti-glare', 'ipad mini2']
 무지개색이 눈에 띄게 보인다는 거죠.
 
 ![실제 보면 이 사진보다 더 심합니다.](/asserts/2019-07-04-powersupport_ag_ipadmini2/powersupport_ag_ipadmini2_03.jpg)
-(이 사진은 PC에서 보아야 제가 의도한대로 보여요.)
+(이 사진은 큰 모니터로 보아야 제가 의도한대로 보여요.)
 
 위 사진은 근접 촬영 후 별도의 후보정은 하지 않고 크롭한 사진인데요.
 
