@@ -13,13 +13,13 @@ tags: ['intellij', 'ide bug', 'code generate']
 
 어느날인가부터 IntelliJ IDEA(이하 IntelliJ)에서 code generate가 없어져 버렸습니다.
 
-![Command + N을 누르면 나오는 Context Menu 라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/004.jpg)
+![Command + N을 누르면 나오는 Context Menu 라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/0004.jpg)
 *(Command + N을 누르면 나오는 Context Menu 라던가...)*
 
-![마우스 오른쪽 버튼을 누르면 나오는 Context Menu 라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/002.jpg)
+![마우스 오른쪽 버튼을 누르면 나오는 Context Menu 라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/0002.jpg)
 *(마우스 오른쪽 버튼을 누르면 나오는 Context Menu 라던가...)*
 
-![상단 메뉴에서 Code를 누르면 나오는 하위 메뉴라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/003.jpg)
+![상단 메뉴에서 Code를 누르면 나오는 하위 메뉴라던가...](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/0003.jpg)
 *(상단 메뉴에서 Code를 누르면 나오는 하위 메뉴라던가...)*
 
 Generate라는 기능은 소스의 일부를 자동 생성해주는 유용한 기능입니다.
@@ -34,7 +34,7 @@ Generate라는 기능은 소스의 일부를 자동 생성해주는 유용한 �
 
 꽤 오래전부터 있던 문제인데 Groovy Plugin을 해제하면 발생하는 문제라고 합니다. (근데 왜 아직도 안고치고 있는거지?)
 
-![Preference > Plugins에서 Groovy 플러그인을 활성화!](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/001.jpg)
+![Preference > Plugins에서 Groovy 플러그인을 활성화!](/asserts/2019-07-15-intellij_could_not_enbled_code_generate/0001.jpg)
 *(Preference > Plugins에서 Groovy 플러그인을 활성화!)*
 
 Groovy 플러그인을 활성화하고 IntelliJ를 재기동하면 깜쪽같이 기능이 돌아옵니다.
