@@ -35,38 +35,4 @@
 
   </div>
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- <script>
-$(document).ready(function () {
-  var urlTitleVal = $("#log_post_title").val();
-
-  if(urlTitleVal == undefined) {
-    urlTitleVal = '';
-  }
-
-  var refUrlVal = document.referrer;
-  $.ajax({
-    type : 'POST',
-    url : 'https://dev.sz21c.com:8443/logger/put',
-    contentType : "application/json",
-    dataType : "json",
-    async : false,
-    data : JSON.stringify({urlTitle : urlTitleVal, referrerUrl : refUrlVal, loggerExcepted : getLoggerExceptedCookie()})
-  });
-});
-
-function getLoggerExceptedCookie()
-{
-    var i,x,y,ARRcookies=document.cookie.split(";");
-    for (i=0;i<ARRcookies.length;i++)
-    {
-      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
-      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
-      x=x.replace(/^\s+|\s+$/g,"");
-      if (x=="excepted-log-value")
-        {
-        return unescape(y);
-        }
-      }
-}
-</script> -->
 </footer>
